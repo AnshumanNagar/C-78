@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>My Family Book</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <h1>My Family Book</h1>
+        <img src="coverPage.jpg" id="images" width="300px">
+        <h3 id="name">My Family Book</h3><br><br>
+        <button id="next_Btn" onclick="next()">Next</button>
+
+        <script>
+            var pageCount = 0;
+            var bookPages = ["My Family Book", "Anshuman Nagar", "Suryansh Nagar", "Beena Nagar", "Vaibhav Nagar", "Pushplata Nagar", "Subhash Chandra Nagar"]; 
+            var bookImage = ["coverPage.jpg", "me.jpg", "brother.jpg", "mom.jpg", "father.png", "grandma.jpg", "grandpa.jpg"];
+            function next(){
+                if (pageCount == 0) {
+                    document.getElementById("name").innerHTML = bookPages[1];
+                    document.getElementById("images").src = bookImage[1];
+                    pageCount += 1
+                } else if(pageCount == 1) {
+                    document.getElementById("name").innerHTML = bookPages[2];
+                    document.getElementById("images").src = bookImage[2];
+                    pageCount += 1
+                } else if(pageCount == 2) {
+                    document.getElementById("name").innerHTML = bookPages[3];
+                    document.getElementById("images").src = bookImage[3];
+                    pageCount += 1
+                } else if(pageCount == 3) {
+                    document.getElementById("name").innerHTML = bookPages[4];
+                    document.getElementById("images").src = bookImage[4];
+                    pageCount += 1
+                } else if(pageCount == 4) {
+                    document.getElementById("name").innerHTML = bookPages[5];
+                    document.getElementById("images").src = bookImage[5];
+                    pageCount += 1
+                } else if(pageCount == 5) {
+                    document.getElementById("name").innerHTML = bookPages[6];
+                    document.getElementById("images").src = bookImage[6];
+                    pageCount += 1
+                } else if(pageCount == 6) {
+                    document.getElementById("name").innerHTML = bookPages[0];
+                    document.getElementById("images").src = bookImage[0];
+                    pageCount = 0
+                }
+            }
+        </script>
+    </body>
+</html>
